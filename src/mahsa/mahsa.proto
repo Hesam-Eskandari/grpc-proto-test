@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = "src/mahsa";
+
+message HelloMahsaRequest {
+  string greet = 1;
+}
+
+message HelloMahsaResponse {
+  string nemikham = 1;
+}
+
+service GRPCMahsaGreeter {
+    rpc SayHelloToMahsa(HelloMahsaRequest) returns (HelloMahsaResponse) {}
+}
